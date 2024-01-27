@@ -9,6 +9,8 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       customer_id: {
+        allowNull: false,
+        unique: true,
         type: Sequelize.INTEGER,
       },
       createdAt: {

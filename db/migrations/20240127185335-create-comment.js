@@ -9,9 +9,11 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       review_id: {
+        allowNull: false,
         type: Sequelize.INTEGER,
       },
       message: {
+        allowNull: false,
         type: Sequelize.TEXT,
       },
       createdAt: {

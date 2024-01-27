@@ -9,18 +9,23 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       name: {
+        allowNull: false,
         type: Sequelize.TEXT,
       },
       email: {
+        unique: true,
+        allowNull: false,
         type: Sequelize.TEXT,
       },
       password: {
+        allowNull: false,
         type: Sequelize.TEXT,
       },
       address: {
         type: Sequelize.TEXT,
       },
       phone: {
+        unique: true,
         type: Sequelize.TEXT,
       },
       createdAt: {

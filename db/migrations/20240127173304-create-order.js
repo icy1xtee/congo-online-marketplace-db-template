@@ -9,6 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       customer_id: {
+        allowNull: false,
         type: Sequelize.INTEGER,
       },
       status: {
