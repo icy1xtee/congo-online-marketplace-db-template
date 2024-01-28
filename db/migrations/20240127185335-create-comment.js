@@ -8,6 +8,15 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
+      customer_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Customers',
+          key: 'id',
+        },
+        defaultValue: 1,
+      },
       review_id: {
         allowNull: false,
         type: Sequelize.INTEGER,

@@ -14,6 +14,15 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Comment.init({
+    customer_id: {
+      allowNull: false,
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Customers',
+        key: 'id',
+      },
+      defaultValue: 1,
+    },
     review_id: {
       allowNull: false,
       type: DataTypes.INTEGER,
