@@ -14,11 +14,34 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Customer.init({
-    name: DataTypes.TEXT,
-    email: DataTypes.TEXT,
-    password: DataTypes.TEXT,
-    address: DataTypes.TEXT,
-    phone: DataTypes.TEXT
+    name: {
+      allowNull: false,
+      type: DataTypes.TEXT,
+    },
+    email: {
+      unique: true,
+      allowNull: false,
+      type: DataTypes.TEXT,
+    },
+    password: {
+      allowNull: false,
+      type: DataTypes.TEXT,
+    },
+    address: {
+      type: DataTypes.TEXT,
+    },
+    phone: {
+      unique: true,
+      type: DataTypes.TEXT,
+    },
+    createdAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
+    updatedAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
   }, {
     sequelize,
     modelName: 'Customer',

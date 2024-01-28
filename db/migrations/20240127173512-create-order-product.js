@@ -11,10 +11,19 @@ module.exports = {
       order_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
+        references: {
+          model: 'Orders',
+          key: 'id',
+        },
+        onDelete: 'CASCADE',
       },
       productItem_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
+        references: {
+          model: 'ProductItems',
+          key: 'id',
+        },
       },
       createdAt: {
         allowNull: false,

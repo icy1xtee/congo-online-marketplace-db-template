@@ -1,7 +1,7 @@
-'use strict';
 const {
-  Model
+  Model,
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Image extends Model {
     /**
@@ -14,8 +14,27 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Image.init({
-    url: DataTypes.TEXT,
-    product_id: DataTypes.INTEGER
+    url: {
+      allowNull: false,
+      type: DataTypes.TEXT,
+    },
+    product_id: {
+      allowNull: false,
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Products',
+        key: 'id',
+      },
+      onDelete: 'CASCADE',
+    },
+    createdAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
+    updatedAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
   }, {
     sequelize,
     modelName: 'Image',

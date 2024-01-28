@@ -11,10 +11,20 @@ module.exports = {
       customer_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
+        references: {
+          model: 'Customers',
+          key: 'id',
+        },
+        defaultValue: 1,
       },
       product_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
+        references: {
+          model: 'Products',
+          key: 'id',
+        },
+        onDelete: 'CASCADE',
       },
       message: {
         allowNull: false,

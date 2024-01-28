@@ -8,13 +8,22 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      customer_id: {
+      cart_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
+        references: {
+          model: 'Carts',
+          key: 'id',
+        },
+        onDelete: 'CASCADE',
       },
       productItem_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
+        references: {
+          model: 'ProductItems',
+          key: 'id',
+        },
       },
       createdAt: {
         allowNull: false,

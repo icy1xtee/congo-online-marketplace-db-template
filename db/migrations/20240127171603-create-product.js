@@ -23,6 +23,10 @@ module.exports = {
       category_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
+        references: {
+          model: 'Categories',
+          key: 'id',
+        },
       },
       createdAt: {
         allowNull: false,

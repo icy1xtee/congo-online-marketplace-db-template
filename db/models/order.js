@@ -14,8 +14,26 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Order.init({
-    customer_id: DataTypes.INTEGER,
-    status: DataTypes.TEXT,
+    customer_id: {
+      allowNull: false,
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Customers',
+        key: 'id',
+      },
+      onDelete: 'CASCADE',
+    },
+    status: {
+      type: DataTypes.TEXT,
+    },
+    createdAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
+    updatedAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
   }, {
     sequelize,
     modelName: 'Order',

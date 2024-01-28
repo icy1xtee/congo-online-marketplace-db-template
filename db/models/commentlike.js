@@ -1,7 +1,7 @@
-'use strict';
 const {
-  Model
+  Model,
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class CommentLike extends Model {
     /**
@@ -14,8 +14,32 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   CommentLike.init({
-    customer_id: DataTypes.INTEGER,
-    comment_id: DataTypes.INTEGER
+    customer_id: {
+      allowNull: false,
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Customers',
+        key: 'id',
+      },
+      defaultValue: 1,
+    },
+    comment_id: {
+      allowNull: false,
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Comments',
+        key: 'id',
+      },
+      onDelete: 'CASCADE',
+    },
+    createdAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
+    updatedAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
   }, {
     sequelize,
     modelName: 'CommentLike',

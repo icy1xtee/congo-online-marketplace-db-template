@@ -14,8 +14,27 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Comment.init({
-    review_id: DataTypes.INTEGER,
-    message: DataTypes.TEXT
+    review_id: {
+      allowNull: false,
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Reviews',
+        key: 'id',
+      },
+      onDelete: 'CASCADE',
+    },
+    message: {
+      allowNull: false,
+      type: DataTypes.TEXT,
+    },
+    createdAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
+    updatedAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
   }, {
     sequelize,
     modelName: 'Comment',

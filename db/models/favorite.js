@@ -1,7 +1,7 @@
-'use strict';
 const {
-  Model
+  Model,
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Favorite extends Model {
     /**
@@ -14,8 +14,32 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Favorite.init({
-    customer_id: DataTypes.INTEGER,
-    product_id: DataTypes.INTEGER
+    customer_id: {
+      allowNull: false,
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Customers',
+        key: 'id',
+      },
+      defaultValue: 1,
+    },
+    product_id: {
+      allowNull: false,
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Products',
+        key: 'id',
+      },
+      onDelete: 'CASCADE',
+    },
+    createdAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
+    updatedAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
   }, {
     sequelize,
     modelName: 'Favorite',

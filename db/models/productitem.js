@@ -14,9 +14,30 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   ProductItem.init({
-    size: DataTypes.TEXT,
-    product_id: DataTypes.INTEGER,
-    count: DataTypes.INTEGER
+    size: {
+      allowNull: false,
+      type: DataTypes.TEXT,
+    },
+    product_id: {
+      allowNull: false,
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Products',
+        key: 'id',
+      },
+      onDelete: 'CASCADE',
+    },
+    count: {
+      type: DataTypes.INTEGER,
+    },
+    createdAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
+    updatedAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
   }, {
     sequelize,
     modelName: 'ProductItem',

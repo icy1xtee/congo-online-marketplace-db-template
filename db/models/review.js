@@ -1,7 +1,7 @@
-'use strict';
 const {
-  Model
+  Model,
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Review extends Model {
     /**
@@ -14,10 +14,40 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Review.init({
-    customer_id: DataTypes.INTEGER,
-    product_id: DataTypes.INTEGER,
-    message: DataTypes.TEXT,
-    rating: DataTypes.INTEGER
+    customer_id: {
+      allowNull: false,
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Customers',
+        key: 'id',
+      },
+      defaultValue: 1,
+    },
+    product_id: {
+      allowNull: false,
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Products',
+        key: 'id',
+      },
+      onDelete: 'CASCADE',
+    },
+    message: {
+      allowNull: false,
+      type: DataTypes.TEXT,
+    },
+    rating: {
+      allowNull: false,
+      type: DataTypes.INTEGER,
+    },
+    createdAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
+    updatedAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
   }, {
     sequelize,
     modelName: 'Review',

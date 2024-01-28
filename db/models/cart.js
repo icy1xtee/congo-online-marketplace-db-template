@@ -1,7 +1,7 @@
-'use strict';
 const {
-  Model
+  Model,
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Cart extends Model {
     /**
@@ -14,7 +14,24 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Cart.init({
-    customer_id: DataTypes.INTEGER
+    customer_id: {
+      allowNull: false,
+      unique: true,
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Customers',
+        key: 'id',
+      },
+      onDelete: 'CASCADE',
+    },
+    createdAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
+    updatedAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
   }, {
     sequelize,
     modelName: 'Cart',

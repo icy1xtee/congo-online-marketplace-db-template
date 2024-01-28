@@ -14,8 +14,32 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   ReviewLike.init({
-    customer_id: DataTypes.INTEGER,
-    review_id: DataTypes.INTEGER
+    customer_id: {
+      allowNull: false,
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Customers',
+        key: 'id',
+      },
+      defaultValue: 1,
+    },
+    review_id: {
+      allowNull: false,
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Reviews',
+        key: 'id',
+      },
+      onDelete: 'CASCADE',
+    },
+    createdAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
+    updatedAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
   }, {
     sequelize,
     modelName: 'ReviewLike',
