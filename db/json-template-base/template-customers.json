@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Deleted User",
+        "email": "deleteduser@deleteduser.com",
+        "password": "helloworld",
+        "address": "noaddress",
+        "phone": "nophone"
+    },
+    {
+        "name": "Alex",
+        "email": "alex@alex.com",
+        "password": "helloworld",
+        "address": "St.Petersburg, Dvortsovaya square, 1, 190000",
+        "phone": "nophone"
+    },
+    {
+        "name": "Liam",
+        "email": "liam@liam.com",
+        "password": "helloworld",
+        "address": "St.Petersburg, Dvortsovaya square, 2, 190000",
+        "phone": "nophone"
+    },
+    {
+        "name": "Oliver",
+        "email": "oliver@oliver.com",
+        "password": "helloworld",
+        "address": "St.Petersburg, Dvortsovaya square, 3, 190000",
+        "phone": "nophone"
+    },
+    {
+        "name": "Theodore",
+        "email": "theo@theo.com",
+        "password": "helloworld",
+        "address": "St.Petersburg, Dvortsovaya square, 4, 190000",
+        "phone": "nophone"
+    },
+    {
+        "name": "Charlotte",
+        "email": "char@char.com",
+        "password": "helloworld",
+        "address": "St.Petersburg, Dvortsovaya square, 5, 190000",
+        "phone": "nophone"
+    },
+    {
+        "name": "Sophia",
+        "email": "sophia@sophia.com",
+        "password": "helloworld",
+        "address": "St.Petersburg, Dvortsovaya square, 6, 190000",
+        "phone": "nophone"
+    },
+    {
+        "name": "Benjamin",
+        "email": "benj@benj.com",
+        "password": "helloworld",
+        "address": "St.Petersburg, Dvortsovaya square, 7, 190000",
+        "phone": "nophone"
+    }
+]

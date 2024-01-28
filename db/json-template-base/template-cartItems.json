@@ -1,0 +1,22 @@
+[
+    {
+        "cart_id": 1,
+        "productItem_id": 4
+    },
+    {
+        "cart_id": 1,
+        "productItem_id": 10
+    },
+    {
+        "cart_id": 2,
+        "productItem_id": 6
+    },
+    {
+        "cart_id": 2,
+        "productItem_id": 7
+    },
+    {
+        "cart_id": 3,
+        "productItem_id": 2
+    }
+]

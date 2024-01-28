@@ -1,0 +1,38 @@
+[
+    {
+        "order_id": 1,
+        "productItem_id": 10
+    },
+    {
+        "order_id": 1,
+        "productItem_id": 4
+    },
+    {
+        "order_id": 2,
+        "productItem_id": 5
+    },
+    {
+        "order_id": 2,
+        "productItem_id": 11
+    },
+    {
+        "order_id": 3,
+        "productItem_id": 15
+    },
+    {
+        "order_id": 3,
+        "productItem_id": 2
+    },
+    {
+        "order_id": 4,
+        "productItem_id": 10
+    },
+    {
+        "order_id": 4,
+        "productItem_id": 1
+    },
+    {
+        "order_id": 4,
+        "productItem_id": 9
+    }
+]

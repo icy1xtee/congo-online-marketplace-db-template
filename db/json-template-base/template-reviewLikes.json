@@ -1,0 +1,18 @@
+[
+    {
+        "customer_id": 4,
+        "review_id": 4 
+    },
+    {
+        "customer_id": 4,
+        "review_id": 3 
+    },
+    {
+        "customer_id": 6,
+        "review_id": 1
+    },
+    {
+        "customer_id": 3,
+        "review_id": 2
+    }
+]

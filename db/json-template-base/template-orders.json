@@ -1,0 +1,18 @@
+[
+    {
+        "customer_id": 2,
+        "status": "delivered"
+    },
+    {
+        "customer_id": 2,
+        "status": "preparing"
+    },
+    {
+        "customer_id": 3,
+        "status": "delivered"
+    },
+    {
+        "customer_id": 6,
+        "status": "delivered"
+    }
+]

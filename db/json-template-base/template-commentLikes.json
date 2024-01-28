@@ -1,0 +1,14 @@
+[
+    {
+        "customer_id": 2,
+        "comment_id": 3
+    },
+    {
+        "customer_id": 5,
+        "comment_id": 3
+    },
+    {
+        "customer_id": 6,
+        "comment_id": 2
+    }
+]

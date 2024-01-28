@@ -1,0 +1,17 @@
+[
+    {
+        "customer_id": 3,
+        "review_id": 1,
+        "message": "i agree"
+    },
+    {
+        "customer_id": 6,
+        "review_id": 2,
+        "message": "weird, i like it actually"
+    },
+    {
+        "customer_id": 3,
+        "review_id": 3,
+        "message": "this is not true"
+    }
+]

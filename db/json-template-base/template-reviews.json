@@ -1,0 +1,26 @@
+[
+    {
+        "customer_id": 2,
+        "product_id": 6,
+        "message": "i like it", 
+        "rating": 5
+    },
+    {
+        "customer_id": 2,
+        "product_id": 9,
+        "message": "i do not like it", 
+        "rating": 2
+    },
+    {
+        "customer_id": 4,
+        "product_id": 2,
+        "message": "the size is too big, hard to wear", 
+        "rating": 3
+    },
+    {
+        "customer_id": 5,
+        "product_id": 11,
+        "message": "this one is lit", 
+        "rating": 5
+    }
+]

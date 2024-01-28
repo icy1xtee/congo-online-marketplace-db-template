@@ -1,0 +1,132 @@
+[
+    {
+        "size": "L",
+        "product_id": 1,
+        "count": 5
+    },
+    {
+        "size": "XL",
+        "product_id": 1,
+        "count": 3
+    },
+    {
+        "size": "L",
+        "product_id": 2,
+        "count": 6
+    },
+    {
+        "size": "XL",
+        "product_id": 2,
+        "count": 2
+    },
+    {
+        "size": "L",
+        "product_id": 3,
+        "count": 14
+    },
+    {
+        "size": "XL",
+        "product_id": 3,
+        "count": 1
+    },
+    {
+        "size": "L",
+        "product_id": 4,
+        "count": 3
+    },
+    {
+        "size": "XL",
+        "product_id": 4,
+        "count": 12
+    },
+    {
+        "size": "L",
+        "product_id": 5,
+        "count": 11
+    },
+    {
+        "size": "XL",
+        "product_id": 5,
+        "count": 15
+    },
+    {
+        "size": "L",
+        "product_id": 6,
+        "count": 9
+    },
+    {
+        "size": "XL",
+        "product_id": 6,
+        "count": 4
+    },
+    {
+        "size": "L",
+        "product_id": 7,
+        "count": 3
+    },
+    {
+        "size": "XL",
+        "product_id": 7,
+        "count": 2
+    },
+    {
+        "size": "L",
+        "product_id": 8,
+        "count": 7
+    },
+    {
+        "size": "XL",
+        "product_id": 8,
+        "count": 1
+    },
+    {
+        "size": "Standart",
+        "product_id": 9,
+        "count": 15
+    },
+    {
+        "size": "Standart",
+        "product_id": 10,
+        "count": 12
+    },
+    {
+        "size": "L",
+        "product_id": 11,
+        "count": 10
+    },
+    {
+        "size": "XL",
+        "product_id": 11,
+        "count": 9
+    },
+    {
+        "size": "L",
+        "product_id": 12,
+        "count": 3
+    },
+    {
+        "size": "XL",
+        "product_id": 12,
+        "count": 6
+    },
+    {
+        "size": "L",
+        "product_id": 13,
+        "count": 0
+    },
+    {
+        "size": "XL",
+        "product_id": 13,
+        "count": 1
+    },
+    {
+        "size": "L",
+        "product_id": 14,
+        "count": 5
+    },
+    {
+        "size": "XL",
+        "product_id": 14,
+        "count": 4
+    }
+]
