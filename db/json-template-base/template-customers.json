@@ -11,48 +11,48 @@
         "email": "alex@alex.com",
         "password": "helloworld",
         "address": "St.Petersburg, Dvortsovaya square, 1, 190000",
-        "phone": "nophone"
+        "phone": "79528120000"
     },
     {
         "name": "Liam",
         "email": "liam@liam.com",
         "password": "helloworld",
         "address": "St.Petersburg, Dvortsovaya square, 2, 190000",
-        "phone": "nophone"
+        "phone": "79528120001"
     },
     {
         "name": "Oliver",
         "email": "oliver@oliver.com",
         "password": "helloworld",
         "address": "St.Petersburg, Dvortsovaya square, 3, 190000",
-        "phone": "nophone"
+        "phone": "79528120002"
     },
     {
         "name": "Theodore",
         "email": "theo@theo.com",
         "password": "helloworld",
         "address": "St.Petersburg, Dvortsovaya square, 4, 190000",
-        "phone": "nophone"
+        "phone": "79528120003"
     },
     {
         "name": "Charlotte",
         "email": "char@char.com",
         "password": "helloworld",
         "address": "St.Petersburg, Dvortsovaya square, 5, 190000",
-        "phone": "nophone"
+        "phone": "79528120004"
     },
     {
         "name": "Sophia",
         "email": "sophia@sophia.com",
         "password": "helloworld",
         "address": "St.Petersburg, Dvortsovaya square, 6, 190000",
-        "phone": "nophone"
+        "phone": "79528120005"
     },
     {
         "name": "Benjamin",
         "email": "benj@benj.com",
         "password": "helloworld",
         "address": "St.Petersburg, Dvortsovaya square, 7, 190000",
-        "phone": "nophone"
+        "phone": "79528120006"
     }
 ]

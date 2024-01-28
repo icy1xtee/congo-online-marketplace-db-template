@@ -1,25 +1,19 @@
-'use strict';
-
+const fs = require('fs/promises');
+const path = require('path');
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+  async up(queryInterface) {
+    const jsonTemplate = await fs.readFile(path.join(__dirname, '..', 'json-template-base', 'template-categories.json'), 'utf-8');
+    const array = JSON.parse(jsonTemplate);
+    const dataToInsert = array.map((el) => ({
+      ...el,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    }));
+    await queryInterface.bulkInsert('Categories', dataToInsert, {});
   },
 
-  async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
-  }
+  async down(queryInterface) {
+    await queryInterface.bulkDelete('Categories', null, {});
+  },
 };
