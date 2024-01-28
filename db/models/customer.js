@@ -4,8 +4,16 @@ const {
 
 module.exports = (sequelize, DataTypes) => {
   class Customer extends Model {
-    static associate(models) {
-      // here
+    static associate({
+      Order, Favorite, Review, ReviewLike, Comment, CommentLike, Cart,
+    }) {
+      this.hasMany(Order, { foreignKey: 'customer_id' });
+      this.hasMany(Favorite, { foreignKey: 'customer_id' });
+      this.hasMany(Review, { foreignKey: 'customer_id' });
+      this.hasMany(ReviewLike, { foreignKey: 'customer_id' });
+      this.hasMany(Comment, { foreignKey: 'customer_id' });
+      this.hasMany(CommentLike, { foreignKey: 'customer_id' });
+      this.hasOne(Cart, { foreignKey: 'customer_id' });
     }
   }
   Customer.init({

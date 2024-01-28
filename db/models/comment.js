@@ -1,16 +1,13 @@
-'use strict';
 const {
-  Model
+  Model,
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Comment extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
+    static associate({ CommentLike, Customer, Review }) {
+      this.hasMany(CommentLike, { foreignKey: 'comment_id' });
+      this.belongsTo(Customer, { foreignKey: 'customer_id' });
+      this.belongsTo(Review, { foreignKey: 'review_id' });
     }
   }
   Comment.init({
