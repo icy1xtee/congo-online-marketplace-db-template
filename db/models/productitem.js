@@ -4,9 +4,8 @@ const {
 
 module.exports = (sequelize, DataTypes) => {
   class ProductItem extends Model {
-    static associate({ OrderItem, CartItem, Product }) {
+    static associate({ OrderItem, Product }) {
       this.hasMany(OrderItem, { foreignKey: 'productItem_id' });
-      this.hasMany(CartItem, { foreignKey: 'productItem_id' });
       this.belongsTo(Product, { foreignKey: 'product_id' });
     }
   }

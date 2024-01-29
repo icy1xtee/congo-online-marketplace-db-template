@@ -13,6 +13,6 @@
     },
     {
         "customer_id": 6,
-        "status": "delivered"
+        "status": "cart"
     }
 ]
